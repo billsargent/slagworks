@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="theme-color" content="#1b1d20">
+<title>Slagworks</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+<canvas id="mapview" class="hidden"></canvas>
+<div id="vignette"></div>
+<div id="ui">
+  <div id="topleft" class="panel"></div>
+  <div id="alerts"></div>
+  <div id="topright"><canvas id="minimap" class="panel" width="176" height="176"></canvas><div id="research" class="panel" data-act="opentech"></div></div>
+  <div id="info" class="panel hidden"></div>
+  <div id="queue"></div>
+  <div id="feed"></div>
+  <div id="hotbar" class="panel"></div>
+  <div id="win" class="panel hidden"></div>
+  <div id="tip" class="panel hidden"></div>
+  <i id="heldicon" class="hidden"></i>
+</div>
+<div id="menu" class="hidden"></div>
+<div id="padcursor"></div>
+<div id="loading">Forging assets…</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

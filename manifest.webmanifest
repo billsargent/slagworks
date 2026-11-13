@@ -1,0 +1,12 @@
+{
+  "name": "Slagworks",
+  "short_name": "Slagworks",
+  "description": "Mine, smelt, automate, launch. A factory automation game.",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0d1014",
+  "theme_color": "#1b1d20",
+  "categories": ["games"],
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
