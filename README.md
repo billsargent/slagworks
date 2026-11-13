@@ -21,6 +21,17 @@ npm run dist:win     # portable .exe and installer in dist/
 npm run dist:linux   # AppImage + tar.gz in dist/ (run on Linux)
 ```
 
+### Releases
+
+GitHub Actions builds Windows and Linux on every push (download the files from the run's **Artifacts**). To publish a release, push a version tag:
+
+```
+git tag v0.2.0
+git push origin v0.2.0
+```
+
+The release gets the Windows installer and portable exe, the Linux AppImage and tar.gz, and a zip of the web version for browsers and Xbox. The version number comes from the tag.
+
 ### Xbox
 
 See [docs/XBOX.md](docs/XBOX.md).
