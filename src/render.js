@@ -8,7 +8,7 @@ import { FLUID_COL } from './data.js';
 import { TILE, CH, DX, DY, key, clamp, hash2 } from './util.js';
 import { getChunk, peekChunk, dims } from './world.js';
 import { paintChunk } from './terrain.js';
-import { treeGrowth } from './sim.js';
+import { treeGrowth, fx } from './sim.js';
 
 export const cam = { x: 0, y: 0, zoom: 1.5 };
 let cvs, ctx, lc, lctx, W = 1, H = 1, dpr = 1, frame = 0;

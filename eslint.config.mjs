@@ -1,0 +1,6 @@
+// Catches references to names that were never defined or imported (run by CI on src/).
+export default [{
+  files: ['src/**/*.js'],
+  languageOptions: { ecmaVersion: 2023, sourceType: 'module', globals: { window: 'readonly', document: 'readonly', navigator: 'readonly', localStorage: 'readonly', console: 'readonly', performance: 'readonly', requestAnimationFrame: 'readonly', setTimeout: 'readonly', addEventListener: 'readonly', innerWidth: 'readonly', innerHeight: 'readonly', devicePixelRatio: 'readonly', location: 'readonly', AudioContext: 'readonly', btoa: 'readonly', atob: 'readonly', escape: 'readonly', unescape: 'readonly', WebSocket: 'readonly', fetch: 'readonly', Response: 'readonly', Math: 'readonly', JSON: 'readonly', Map: 'readonly', Set: 'readonly', Promise: 'readonly', Object: 'readonly', Array: 'readonly', String: 'readonly', Number: 'readonly', Buffer: 'readonly', Uint8Array: 'readonly', Uint32Array: 'readonly', Float32Array: 'readonly', Infinity: 'readonly', NaN: 'readonly', isNaN: 'readonly', parseInt: 'readonly', Date: 'readonly', Error: 'readonly', TypeError: 'readonly', encodeURIComponent: 'readonly', decodeURIComponent: 'readonly', Boolean: 'readonly', undefined: 'readonly' } },
+  rules: { 'no-undef': 'error' },
+}];

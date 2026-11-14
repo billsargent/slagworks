@@ -48,7 +48,13 @@ hooks.load = id => {
 const autosave = () => saveGame('auto', 'Autosave');
 hooks.quit = () => { closeMap(); autosave(); UI.menu = true; UI.sub = ''; closeWin(); renderMenu(); };
 
+let errShown = 0;
 function frame(ts) {
+  // keep the loop alive even if one frame throws, and tell the player once
+  requestAnimationFrame(frame);
+  try { step(ts); } catch (e) { console.error(e); if (performance.now() - errShown > 10000) { errShown = performance.now(); toast('Something went wrong: ' + e.message + ' (the game will keep running)'); } endFrame(); }
+}
+function step(ts) {
   const dt = Math.min(100, ts - lastT); lastT = ts;
   pollInput(dt / 1000);
   if (!UI.menu) {
@@ -63,7 +69,6 @@ function frame(ts) {
   }
   uiFrame();
   endFrame();
-  requestAnimationFrame(frame);
 }
 
 function boot() {
